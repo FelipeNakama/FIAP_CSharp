@@ -11,21 +11,31 @@ namespace MyApp
         static int opcao = 0;
 
         /// <summary>
-        /// Função que Printa valores na tela
+        /// Função que Printa valores String na tela
         /// </summary>
         /// <param name="value">Valor a ser printado</param>
-        /// return>void</return>
-
+        /// <returns>void</returns>
         static void Print(string value)
         {
             Console.WriteLine(value);
         }
 
+        /// <summary>
+        /// Função que Printa valores Double na tela, sendo uma sobrecarga da função Print
+        /// </summary>
+        /// <param name="value">Valor a ser printado</param>
+        /// <returns>void</returns>
         static void Print(double value)
         {
             Console.WriteLine(value);
         }
 
+
+        /// <summary>
+        /// Função que calcula a area do circulo
+        /// </summary>
+        /// <param name="value">Raio do circulo</param>
+        /// <returns>Area do circulo</returns>
         static double AreaCirculo(double value)
         {
             double r = 0;
@@ -33,6 +43,13 @@ namespace MyApp
             return r;
         }
 
+
+        /// <summary>
+        /// Função que calcula a area do triangulo
+        /// </summary>
+        /// <param name="b">Base do triangulo</param>
+        /// <param name="a">Altura do triangulo</param>
+        /// <returns>Area do triangulo</returns>
         static double AreaTriangulo(double b, double a)
         {
             double r = 0;
@@ -40,6 +57,13 @@ namespace MyApp
             return r;
         }
 
+
+        /// <summary>
+        /// Função que calcula a area do retangulo
+        /// </summary>
+        /// <param name="b">Base do retangulo</param>
+        /// <param name="a">Altura do retangulo</param>
+        /// <returns>Area do retangulo</returns>
         static double AreaRetangulo(double b, double a)
         {
             double r = 0;
@@ -63,7 +87,7 @@ namespace MyApp
             }
             else if (opcao == 2)
             {
-                Print("Insira a base do Triangulo:");
+                Print("Insira a base do Triângulo:");
                 baseForma = double.Parse(Console.ReadLine());
                 Print("Insira a altura do Triangulo:");
                 altura = double.Parse(Console.ReadLine());
@@ -72,12 +96,12 @@ namespace MyApp
             }
             else if (opcao == 3)
             {
-                Print("Insira a base do Retangulo:");
+                Print("Insira a base do Retângulo:");
                 baseForma = double.Parse(Console.ReadLine());
-                Print("Insira a altura do Retangulo:");
+                Print("Insira a altura do Retângulo:");
                 altura = double.Parse(Console.ReadLine());
                 double resp = AreaRetangulo(baseForma, altura);
-                Print(nome + " a Area do Retangulo " + resp);
+                Print(nome + " a Area do Retângulo " + resp);
             }
             else
             {
